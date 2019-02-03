@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Navbar, Grid, Row, Col } from 'react-bootstrap';
+import TokenList from './components/TokenList';
+import InfoUser from './components/InfoUser';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Navbar inverse staticTop>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#">Ecommerce</a>
+            </Navbar.Brand>
+          </Navbar.Header>
+        </Navbar>
+
+        <Grid>
+          <Row>
+            <TokenList/>
+          </Row>
+          <Row>
+            <InfoUser />
+          </Row>
+        </Grid>
       </div>
     );
   }
