@@ -26,7 +26,7 @@ export class TokenList extends Component {
   componentDidUpdate(prevProps) {
     console.info('this.prevProps',this.prevProps);
     console.info('this.props',this.props);
-    if (this.props.prevUserInfo.tokens && this.props.prevUserInfo.tokens.length === 1)store.dispatch(this.props.loadUser(this.props.prevUserInfo.tokens[0].token));
+    //if (this.props.prevUserInfo.tokens && this.props.prevUserInfo.tokens.length === 1)store.dispatch(this.props.loadUser(this.props.prevUserInfo.tokens[0].token));
   }
   renderSwitch = ({isFetching,isEmpty,isError,errorMessage,tokens},loadUser) =>{
     //console.log('isFetching',isFetching);

@@ -14,6 +14,7 @@ const loadTokens = () => {
         return axios.post("https://api2.karaokesmart.co/v2/user/search/",profile)
             .then(response => {
                 console.log('response',response);
+                if (response.data.data.users.length===1)dispatch(loadUser(response.data.data.users[0].token))
                 dispatch({
                     type:"GET_TOKENS_SUCCESS",
                     tokens: response.data.data.users

@@ -9,7 +9,7 @@ export class UserInfo extends Component {
   }
   renderSwitch = ({isFetching,isEmpty,isError,errorMessage,user}) =>{
     console.log('user',user);
-    return;
+    //return;
     //{isFetching,isEmpty,isError,errorMessage,user}
     if (isFetching) return <h2>Loading...</h2>;
     if (isError) return <h2>{errorMessage}</h2>;
